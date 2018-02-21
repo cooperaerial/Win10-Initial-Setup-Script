@@ -1,0 +1,47 @@
+# Directions - run this command in the directory with Win10.ps1 and Cooper.txt
+#powershell.exe -NoProfile -ExecutionPolicy Bypass -File Win10.ps1 -preset Cooper.txt
+
+### Privacy Settings ###
+EnableSmartScreen
+
+### Service Tweaks ###
+DisableSharingMappedDrives
+EnableAdminShares
+DisableSMB1
+SetUnknownNetworksPublic
+DisableNetDevicesAutoInst
+EnableCtrldFolderAccess
+EnableFirewall
+EnableDefender
+EnableDefenderCloud
+EnableUpdateMSRT
+DisableUpdateDriver
+EnableStorageSense
+EnableDefragmentation
+DisableSuperfetch
+DisableSleepTimeout
+DisableFastStartup
+
+### UI Tweaks ###
+EnableFileDeleteConfirm
+HideHiddenFiles
+HideUserFolderFromDesktop
+HideMusicFromExplorer
+HideVideosFromExplorer
+Hide3DObjectsFromExplorer
+SetControlPanelViewIcons
+SetVisualFXPerformance
+DisableThumbsDB
+
+### Application Tweaks ###
+DisableOneDrive
+UninstallOneDrive
+InstallWindowsStore
+DisableXboxFeatures
+DisableAdobeFlash
+SetPhotoViewerAssociation
+AddPhotoViewerOpenWith
+DisableSearchAppInStore
+
+### Unpinning ###
+UnpinStartMenuTiles
