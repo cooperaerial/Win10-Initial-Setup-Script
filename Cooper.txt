@@ -1,5 +1,8 @@
 # Directions - run this command in the directory with Win10.ps1 and Cooper.txt
-#powershell.exe -NoProfile -ExecutionPolicy Bypass -File Win10.ps1 -preset Cooper.txt
+# powershell.exe -NoProfile -ExecutionPolicy Bypass -File Win10.ps1 -preset Cooper.txt
+
+# Change computer name - replace $name with computer name
+# Rename-Computer -NewName $name
 
 ### Privacy Settings ###
 EnableSmartScreen
