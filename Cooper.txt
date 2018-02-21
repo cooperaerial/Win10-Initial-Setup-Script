@@ -1,8 +1,8 @@
 # Directions - run this command in the directory with Win10.ps1 and Cooper.txt
 # powershell.exe -NoProfile -ExecutionPolicy Bypass -File Win10.ps1 -preset Cooper.txt
 
-# Change computer name - replace $name with computer name
-# Rename-Computer -NewName $name
+### Require administrator privileges ###
+RequireAdmin
 
 ### Privacy Settings ###
 EnableSmartScreen
@@ -28,6 +28,8 @@ DisableFastStartup
 ### UI Tweaks ###
 EnableFileDeleteConfirm
 HideHiddenFiles
+HideTrayIcons
+ShowRecentShortcuts
 HideUserFolderFromDesktop
 HideMusicFromExplorer
 HideVideosFromExplorer
@@ -48,3 +50,7 @@ DisableSearchAppInStore
 
 ### Unpinning ###
 UnpinStartMenuTiles
+
+### Auxiliary Functions ###
+WaitForKey
+Restart
