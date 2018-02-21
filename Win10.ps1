@@ -103,9 +103,9 @@ $tweaks = @(
     "DisableThumbsDB", # "EnableThumbsDB",
     # "AddENKeyboard",              # "RemoveENKeyboard",
     # "EnableNumlock",              # "DisableNumlock",
-	# "RemoveXPSPrinter",
-	# "RemovePrinttoPDFPrinter",
-	# "RemoveFaxPrinter",
+    # "RemoveXPSPrinter",
+    # "RemovePrinttoPDFPrinter",
+    # "RemoveFaxPrinter",
 
     ### Application Tweaks ###
     "DisableOneDrive", # "EnableOneDrive",
