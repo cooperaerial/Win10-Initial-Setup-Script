@@ -37,6 +37,8 @@ Hide3DObjectsFromExplorer
 SetControlPanelViewIcons
 SetVisualFXPerformance
 DisableThumbsDB
+RemoveXPSPrinter
+RemoveFaxPrinter
 
 ### Application Tweaks ###
 DisableOneDrive
