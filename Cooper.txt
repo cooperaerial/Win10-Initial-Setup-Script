@@ -51,6 +51,7 @@ DisableSearchAppInStore
 
 ### Unpinning ###
 UnpinStartMenuTiles
+UnpinTaskbarIcons
 
 ### Auxiliary Functions ###
 WaitForKey
