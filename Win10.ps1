@@ -104,8 +104,8 @@ $tweaks = @(
     # "AddENKeyboard",              # "RemoveENKeyboard",
     # "EnableNumlock",              # "DisableNumlock",
     # "RemoveXPSPrinter",
-    # "RemovePrinttoPDFPrinter",
     # "RemoveFaxPrinter",
+    # "RemovePrinttoPDFPrinter",
 
     ### Application Tweaks ###
     "DisableOneDrive", # "EnableOneDrive",
@@ -1596,16 +1596,15 @@ Function RemoveXPSPrinter {
     Remove-Printer –Name "Microsoft XPS Document Writer"
 }
 
-# Remove Print to PDF printer
-Function RemovePrinttoPDFPrinter {
-    Remove-Printer –Name "Microsoft Print to PDF"
-}
-
 # Remove Fax printer
 Function RemoveFaxPrinter {
     Remove-Printer –Name "Fax"
 }
 
+# Remove Print to PDF printer
+Function RemovePrinttoPDFPrinter {
+    Remove-Printer –Name "Microsoft Print to PDF"
+}
 
 ##########
 # Application Tweaks
