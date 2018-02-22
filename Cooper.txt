@@ -31,7 +31,6 @@ HideHiddenFiles
 HideTrayIcons
 ShowRecentShortcuts
 HideUserFolderFromDesktop
-HideMusicFromExplorer
 HideVideosFromExplorer
 Hide3DObjectsFromExplorer
 SetControlPanelViewIcons
