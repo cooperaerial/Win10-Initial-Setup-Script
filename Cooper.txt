@@ -42,6 +42,8 @@ RemoveFaxPrinter
 ### Application Tweaks ###
 DisableOneDrive
 UninstallOneDrive
+UninstallMsftBloat
+UninstallThirdPartyBloat
 InstallWindowsStore
 DisableXboxFeatures
 DisableAdobeFlash
