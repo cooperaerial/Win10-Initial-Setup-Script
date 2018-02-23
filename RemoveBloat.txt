@@ -1,6 +1,3 @@
-### Require administrator privileges ###
-RequireAdmin
-
 ### Application Tweaks ###
 UninstallMsftBloat
 UninstallThirdPartyBloat
