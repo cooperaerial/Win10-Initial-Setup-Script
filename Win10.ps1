@@ -1,4 +1,4 @@
-##########
+﻿##########
 # Win10 / WinServer2016 Initial Setup Script
 # Author: Disassembler <disassembler@dasm.cz>
 # Version: v2.12, 2018-01-09
