@@ -5,7 +5,23 @@
 RequireAdmin
 
 ### Privacy Settings ###
+DisableTelemetry
+DisableWiFiSense
 EnableSmartScreen
+DisableWebSearch
+DisableAppSuggestions
+DisableBackgroundApps
+DisableLockScreenSpotlight
+DisableLocationTracking
+DisableMapUpdates
+DisableFeedback
+DisableAdvertisingID
+DisableCortana
+DisableErrorReporting
+SetP2PUpdateLocal
+DisableAutoLogger
+DisableDiagTrack
+DisableWAPPush
 
 ### Service Tweaks ###
 DisableSharingMappedDrives
@@ -19,23 +35,53 @@ EnableDefender
 EnableDefenderCloud
 EnableUpdateMSRT
 DisableUpdateDriver
+DisableUpdateRestart
+DisableHomeGroups
+DisableSharedExperiences
+DisableRemoteAssistance
+EnableRemoteDesktop
+DisableAutoplay
+DisableAutorun
 EnableStorageSense
 EnableDefragmentation
 DisableSuperfetch
+EnableIndexing
+EnableSleepButton
 DisableSleepTimeout
 DisableFastStartup
 
 ### UI Tweaks ###
+DisableLockScreen
+HideNetworkFromLockScreen
+DisableStickyKeys
+ShowTaskManagerDetails
+ShowFileOperationsDetails
 EnableFileDeleteConfirm
+HideTaskbarSearchBox
+HideTaskView
+ShowTaskbarTitles
+HideTaskbarPeopleIcon
+ShowKnownExtensions
 HideHiddenFiles
-HideTrayIcons
-ShowRecentShortcuts
+HideSyncNotifications
+SetExplorerThisPC
+ShowThisPCOnDesktop
 HideUserFolderFromDesktop
+HideDesktopFromThisPC
+HideDocumentsFromThisPC
+HideDownloadsFromThisPC
+HideMusicFromThisPC
+HideMusicFromExplorer
+HidePicturesFromThisPC
+HidePicturesFromExplorer
+HideVideosFromThisPC
 HideVideosFromExplorer
+Hide3DObjectsFromThisPC
 Hide3DObjectsFromExplorer
 SetControlPanelViewIcons
 SetVisualFXPerformance
 DisableThumbsDB
+EnableNumlock
 RemoveXPSPrinter
 RemoveFaxPrinter
 
@@ -44,12 +90,14 @@ DisableOneDrive
 UninstallOneDrive
 UninstallMsftBloat
 UninstallThirdPartyBloat
-InstallWindowsStore
 DisableXboxFeatures
 DisableAdobeFlash
+UninstallWorkFolders
 SetPhotoViewerAssociation
 AddPhotoViewerOpenWith
 DisableSearchAppInStore
+DisableNewAppPrompt
+EnableF8BootMenu
 
 ### Unpinning ###
 UnpinStartMenuTiles
