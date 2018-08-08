@@ -23,7 +23,7 @@ DisableAutoLogger
 DisableDiagTrack
 DisableWAPPush
 
-### Service Tweaks ###
+### Security Tweaks ###
 DisableSharingMappedDrives
 EnableAdminShares
 DisableSMB1
@@ -33,17 +33,22 @@ EnableCtrldFolderAccess
 EnableFirewall
 EnableDefender
 EnableDefenderCloud
+EnableF8BootMenu
+SetDEPOptIn
+EnableCIMemoryIntegrity
+
+### Service Tweaks ###
 EnableUpdateMSRT
 DisableUpdateDriver
 DisableUpdateRestart
 DisableHomeGroups
 DisableSharedExperiences
-DisableRemoteAssistance
+EnableRemoteAssistance
 EnableRemoteDesktop
 DisableAutoplay
 DisableAutorun
 EnableStorageSense
-EnableDefragmentation
+DisableDefragmentation
 DisableSuperfetch
 EnableIndexing
 EnableSleepButton
@@ -53,16 +58,27 @@ DisableFastStartup
 ### UI Tweaks ###
 DisableLockScreen
 HideNetworkFromLockScreen
+ShowShutdownOnLockScreen
 DisableStickyKeys
 ShowTaskManagerDetails
 ShowFileOperationsDetails
 EnableFileDeleteConfirm
+HideTaskbarSearch
 HideTaskbarSearchBox
 HideTaskView
-ShowTaskbarTitles
+ShowSmallTaskbarIcons
+SetTaskbarCombineWhenFull
 HideTaskbarPeopleIcon
+DisableSearchAppInStore
+DisableNewAppPrompt
+SetControlPanelSmallIcons
+SetVisualFXPerformance
+EnableNumlock
+
+### Explorer UI Tweaks ###
 ShowKnownExtensions
 HideHiddenFiles
+HideSelectCheckboxes
 HideSyncNotifications
 SetExplorerThisPC
 ShowThisPCOnDesktop
@@ -78,12 +94,8 @@ HideVideosFromThisPC
 HideVideosFromExplorer
 Hide3DObjectsFromThisPC
 Hide3DObjectsFromExplorer
-SetControlPanelViewIcons
-SetVisualFXPerformance
-DisableThumbsDB
-EnableNumlock
-RemoveXPSPrinter
-RemoveFaxPrinter
+DisableThumbsDBOnNetwork
+
 
 ### Application Tweaks ###
 DisableOneDrive
@@ -95,9 +107,8 @@ DisableAdobeFlash
 UninstallWorkFolders
 SetPhotoViewerAssociation
 AddPhotoViewerOpenWith
-DisableSearchAppInStore
-DisableNewAppPrompt
-EnableF8BootMenu
+UninstallXPSPrinter
+RemoveFaxPrinter
 
 ### Unpinning ###
 UnpinStartMenuTiles
