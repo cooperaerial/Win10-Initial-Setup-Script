@@ -1877,6 +1877,11 @@ Function EnableThumbsDBOnNetwork {
 	Remove-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" -Name "DisableThumbsDBOnNetworkFolders" -ErrorAction SilentlyContinue
 }
 
+# Remove XPS printer
+Function RemoveXPSPrinter {
+    Remove-Printer –Name "Microsoft XPS Document Writer"
+}
+
 # Remove Print to PDF printer
 Function RemovePrinttoPDFPrinter {
     Remove-Printer –Name "Microsoft Print to PDF"
