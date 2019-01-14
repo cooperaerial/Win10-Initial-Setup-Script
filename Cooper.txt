@@ -10,16 +10,17 @@ DisableWiFiSense
 EnableSmartScreen
 DisableWebSearch
 DisableAppSuggestions
+DisableActivityHistory
 DisableBackgroundApps
-DisableLockScreenSpotlight
 DisableLocationTracking
 DisableMapUpdates
 DisableFeedback
+DisableTailoredExperiences
 DisableAdvertisingID
+DisableWebLangList
 DisableCortana
 DisableErrorReporting
 SetP2PUpdateLocal
-DisableAutoLogger
 DisableDiagTrack
 DisableWAPPush
 
@@ -29,13 +30,18 @@ EnableAdminShares
 DisableSMB1
 SetUnknownNetworksPublic
 DisableNetDevicesAutoInst
-EnableCtrldFolderAccess
 EnableFirewall
 EnableDefender
 EnableDefenderCloud
-EnableF8BootMenu
-SetDEPOptIn
+EnableCtrldFolderAccess
 EnableCIMemoryIntegrity
+EnableDefenderAppGuard
+HideAccountProtectionWarn
+EnableMeltdownCompatFlag
+EnableF8BootMenu
+EnableBootRecovery
+EnableRecoveryAndReset
+SetDEPOptIn
 
 ### Service Tweaks ###
 EnableUpdateMSRT
@@ -47,6 +53,7 @@ EnableRemoteAssistance
 EnableRemoteDesktop
 DisableAutoplay
 DisableAutorun
+EnableRestorePoints
 EnableStorageSense
 DisableDefragmentation
 DisableSuperfetch
@@ -54,11 +61,13 @@ EnableIndexing
 EnableSleepButton
 DisableSleepTimeout
 DisableFastStartup
+DisableAutoRebootOnCrash
 
 ### UI Tweaks ###
 DisableLockScreen
 HideNetworkFromLockScreen
 ShowShutdownOnLockScreen
+EnableAeroShake
 DisableStickyKeys
 ShowTaskManagerDetails
 ShowFileOperationsDetails
@@ -71,21 +80,30 @@ SetTaskbarCombineWhenFull
 HideTaskbarPeopleIcon
 DisableSearchAppInStore
 DisableNewAppPrompt
+ShowRecentlyAddedApps
 SetControlPanelSmallIcons
+DisableShortcutInName
+ShowShortcutArrow
 SetVisualFXPerformance
 EnableNumlock
+DisableStartupSound
 
 ### Explorer UI Tweaks ###
 ShowKnownExtensions
 HideHiddenFiles
+EnableNavPaneExpand
+EnableRestoreFldrWindows
+DisableSharingWizard
 HideSelectCheckboxes
 HideSyncNotifications
 SetExplorerThisPC
+ShowQuickAccess
 ShowThisPCOnDesktop
 HideUserFolderFromDesktop
 HideDesktopFromThisPC
-HideDocumentsFromThisPC
-HideDownloadsFromThisPC
+HideControlPanelFromDesktop
+ShowDocumentsInThisPC
+ShowDownloadsInThisPC
 HideMusicFromThisPC
 HideMusicFromExplorer
 HidePicturesFromThisPC
@@ -94,6 +112,7 @@ HideVideosFromThisPC
 HideVideosFromExplorer
 Hide3DObjectsFromThisPC
 Hide3DObjectsFromExplorer
+HideGiveAccessToMenu
 DisableThumbsDBOnNetwork
 
 
@@ -104,7 +123,11 @@ UninstallMsftBloat
 UninstallThirdPartyBloat
 DisableXboxFeatures
 DisableAdobeFlash
+DisableEdgePreload
+DisableEdgeShortcutCreation
+DisableIEFirstRun
 UninstallWorkFolders
+InstallNET23
 SetPhotoViewerAssociation
 AddPhotoViewerOpenWith
 UninstallXPSPrinter
