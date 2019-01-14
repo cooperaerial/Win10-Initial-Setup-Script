@@ -10,6 +10,8 @@ Rename-Computer -NewName $name
 Write-Host "Enabling display and sleep mode timeouts..."
 powercfg /X monitor-timeout-ac 30
 powercfg /X monitor-timeout-dc 5
+powercfg /X standby-timeout-ac 180
+powercfg /X standby-timeout-dc 10
 
 Write-Host "Set RegisteredOrganization and RegisteredOwner..."
 If (!(Test-Path "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\RegisteredOrganization")) {
@@ -36,6 +38,9 @@ Write-Host "Enable uninstalling Mixed Reality Portal - Open Settings and go to M
 If (!(Test-Path "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Holographic")) {
     Set-ItemProperty -Path "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Holographic" -Name "FirstRunSucceeded" -Type DWord -Value 1
 }
+
+Get-AppxPackage -AllUsers "Microsoft.MSPaint" | ForEach-Object {Add-AppxPackage -DisableDevelopmentMode -Register "$($_.InstallLocation)\AppXManifest.xml"}
+Get-AppxPackage -AllUsers "Microsoft.Office.OneNote" | ForEach-Object {Add-AppxPackage -DisableDevelopmentMode -Register "$($_.InstallLocation)\AppXManifest.xml"}
 
 Write-Host "Restarting..."
 Restart-Computer
