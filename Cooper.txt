@@ -81,10 +81,12 @@ HideTaskbarPeopleIcon
 DisableSearchAppInStore
 DisableNewAppPrompt
 ShowRecentlyAddedApps
+ShowMostUsedApps
 SetControlPanelSmallIcons
 DisableShortcutInName
 ShowShortcutArrow
 SetVisualFXPerformance
+EnableTitleBarColor
 EnableNumlock
 DisableStartupSound
 
@@ -96,6 +98,7 @@ EnableRestoreFldrWindows
 DisableSharingWizard
 HideSelectCheckboxes
 HideSyncNotifications
+ShowRecentShortcuts
 SetExplorerThisPC
 ShowQuickAccess
 ShowThisPCOnDesktop
@@ -117,8 +120,6 @@ DisableThumbsDBOnNetwork
 
 
 ### Application Tweaks ###
-DisableOneDrive
-UninstallOneDrive
 UninstallMsftBloat
 UninstallThirdPartyBloat
 DisableXboxFeatures
@@ -130,6 +131,7 @@ UninstallWorkFolders
 InstallNET23
 SetPhotoViewerAssociation
 AddPhotoViewerOpenWith
+InstallPDFPrinter
 UninstallXPSPrinter
 RemoveFaxPrinter
 
