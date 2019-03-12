@@ -88,6 +88,7 @@ ShowShortcutArrow
 SetVisualFXPerformance
 EnableTitleBarColor
 EnableNumlock
+SetSoundSchemeNone
 DisableStartupSound
 
 ### Explorer UI Tweaks ###
