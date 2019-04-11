@@ -9,3 +9,4 @@ DisableIEFirstRun
 
 ### Auxiliary Functions ###
 WaitForKey
+Restart

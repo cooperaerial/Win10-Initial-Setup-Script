@@ -1,3 +1,6 @@
+### Require administrator privileges ###
+RequireAdmin
+
 ### Privacy Settings ###
 DisableWebSearch
 DisableAppSuggestions
@@ -51,3 +54,7 @@ DisableThumbsDBOnNetwork
 ### Unpinning ###
 UnpinStartMenuTiles
 UnpinTaskbarIcons
+
+### Auxiliary Functions ###
+WaitForKey
+Restart
