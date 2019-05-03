@@ -1,14 +1,7 @@
-### Require administrator privileges ###
-RequireAdmin
-
 ### Privacy Settings ###
-DisableWebSearch
-DisableAppSuggestions
 DisableBackgroundApps
-DisableFeedback
 DisableTailoredExperiences
 DisableWebLangList
-DisableCortana
 
 ### Security Tweaks ###
 HideAccountProtectionWarn
@@ -23,9 +16,7 @@ EnableAeroShake
 DisableStickyKeys
 ShowTaskManagerDetails
 ShowFileOperationsDetails
-EnableFileDeleteConfirm
 HideTaskbarSearch
-HideTaskbarSearchBox
 HideTaskView
 ShowSmallTaskbarIcons
 SetTaskbarCombineWhenFull
@@ -54,7 +45,3 @@ DisableThumbsDBOnNetwork
 ### Unpinning ###
 UnpinStartMenuTiles
 UnpinTaskbarIcons
-
-### Auxiliary Functions ###
-WaitForKey
-Restart
