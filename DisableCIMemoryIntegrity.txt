@@ -1,0 +1,8 @@
+### Require administrator privileges ###
+RequireAdmin
+
+DisableCIMemoryIntegrity
+
+### Auxiliary Functions ###
+WaitForKey
+Restart
