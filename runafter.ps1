@@ -49,5 +49,11 @@ If (!(Test-Path "HKLM:\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStati
 }
 Set-ItemProperty -Path "HKLM:HKLM:\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp" -Name "UserAuthentication" -Type DWord -Value 1
 
+Write-Host "Turn on Tamper Protection..."
+If (!(Test-Path "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Defender\Features")) {
+    New-Item -Path "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Defender\Features" -Force | Out-Null
+}
+Set-ItemProperty -Path "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Defender\Features" -Name "TamperProtection" -Type DWord -Value 5
+
 Write-Host "Restarting..."
 Restart-Computer
