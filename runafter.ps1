@@ -55,5 +55,11 @@ If (!(Test-Path "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Defender\Features
 }
 Set-ItemProperty -Path "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Defender\Features" -Name "TamperProtection" -Type DWord -Value 5
 
+Write-Host "Show Most Used Apps in Start Menu..."
+If (!(Test-Path "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Explorer")) {
+    New-Item -Path "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Explorer" -Force | Out-Null
+}
+Set-ItemProperty -Path "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Explorer" -Name "HideRecentlyAddedApps" -Type DWord -Value 0
+
 Write-Host "Restarting..."
 Restart-Computer
