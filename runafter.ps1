@@ -7,11 +7,51 @@ If (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]:
 $name = Read-Host -Prompt 'Input new computer name'
 Rename-Computer -NewName $name
 
-Write-Host "Enabling display and sleep mode timeouts..."
-powercfg /X monitor-timeout-ac 30
-powercfg /X monitor-timeout-dc 5
-powercfg /X standby-timeout-ac 180
-powercfg /X standby-timeout-dc 10
+function Show-Menu {
+  param (
+    [string]$Title = 'Sleep Settings'
+  )
+  cls
+  Write-Host "================ $Title ================"
+
+  Write-Host "1: Press '1' for Desktop (never sleep)"
+  Write-Host "2: Press '2' for Laptop (3 Hr Sleep)"
+  Write-Host "3: Press '3' for Laptop Battery save (1 Hr Sleep)"
+  Write-Host "S: Press 'S' to skip"
+}
+
+do {
+  Show-Menu
+  $input = Read-Host "Please make a selection"
+  switch ($input) {
+    '1' {
+      cls
+      Write-Host "Desktop (never sleep)..."
+      powercfg /X monitor-timeout-ac 30
+      powercfg /X monitor-timeout-dc 5
+      powercfg /X standby-timeout-ac 0
+      powercfg /X standby-timeout-dc 10
+    } '2' {
+      cls
+      Write-Host "Setting Laptop (3 Hr Sleep)..."
+      powercfg /X monitor-timeout-ac 30
+      powercfg /X monitor-timeout-dc 5
+      powercfg /X standby-timeout-ac 180
+      powercfg /X standby-timeout-dc 10
+    } '3' {
+      cls
+      Write-Host "Setting Laptop (3 Hr Sleep)..."
+      powercfg /X monitor-timeout-ac 15
+      powercfg /X monitor-timeout-dc 5
+      powercfg /X standby-timeout-ac 60
+      powercfg /X standby-timeout-dc 10
+    } 's' {
+      return
+    }
+  }
+  pause
+}
+until ($input -eq 's')
 
 Write-Host "Set RegisteredOrganization and RegisteredOwner..."
 If (!(Test-Path "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\RegisteredOrganization")) {
