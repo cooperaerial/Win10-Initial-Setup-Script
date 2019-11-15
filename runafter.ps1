@@ -97,5 +97,8 @@ If (!(Test-Path "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Explorer
 }
 Set-ItemProperty -Path "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Explorer" -Name "HideRecentlyAddedApps" -Type DWord -Value 0
 
+Write-Host "Setting Time Zone To AZ No DST"
+Set-TimeZone -Name "US Mountain Standard Time"
+
 Write-Host "Restarting..."
 Restart-Computer
