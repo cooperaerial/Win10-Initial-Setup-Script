@@ -10,4 +10,6 @@ New-PSDrive -Name "M" -Root "\\phx-storage\Management" -Persist -PSProvider "Fil
 
 Write-Host "Map ToArchive as T: ..."
 New-PSDrive -Name "T" -Root "\\phx-storage\ToArchive" -Persist -PSProvider "FileSystem"
+Write-Host "Map ToArchive as T: ..."
+New-PSDrive -Name "X" -Root "\\tuc-jobs\projects" -Persist -PSProvider "FileSystem"
 Net Use
