@@ -100,5 +100,8 @@ Set-ItemProperty -Path "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\E
 Write-Host "Setting Time Zone To AZ No DST"
 Set-TimeZone -Name "US Mountain Standard Time"
 
+Write-Host "VR License"
+[Environment]::SetEnvironmentVariable("VRLHOME", $env:VRLHOME + "\\tuc-jobs\vrl$\lic", "Machine")
+
 Write-Host "Restarting..."
 Restart-Computer
