@@ -25,6 +25,8 @@ SetControlPanelSmallIcons
 DisableShortcutInName
 SetVisualFXPerformance
 EnableTitleBarColor
+SetAppsDarkMode
+SetSystemDarkMode
 SetSoundSchemeNone
 
 ### Explorer UI Tweaks ###
