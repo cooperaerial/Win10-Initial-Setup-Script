@@ -11,7 +11,7 @@ function Show-Menu {
   param (
     [string]$Title = 'Sleep Settings'
   )
-  cls
+  Clear-Host
   Write-Host "================ $Title ================"
 
   Write-Host "1: Press '1' for Desktop (never sleep)"
@@ -21,24 +21,24 @@ function Show-Menu {
 }
 
 Show-Menu
-$input = Read-Host "Please make a selection"
-switch ($input) {
+$menu = Read-Host "Please make a selection"
+switch ($menu) {
   '1' {
-    cls
+    Clear-Host
     Write-Host "Desktop (never sleep)..."
     powercfg /X monitor-timeout-ac 30
     powercfg /X monitor-timeout-dc 5
     powercfg /X standby-timeout-ac 0
     powercfg /X standby-timeout-dc 10
   } '2' {
-    cls
+    Clear-Host
     Write-Host "Setting Laptop (3 Hr Sleep)..."
     powercfg /X monitor-timeout-ac 30
     powercfg /X monitor-timeout-dc 5
     powercfg /X standby-timeout-ac 180
     powercfg /X standby-timeout-dc 10
   } '3' {
-    cls
+    Clear-Host
     Write-Host "Setting Laptop (3 Hr Sleep)..."
     powercfg /X monitor-timeout-ac 15
     powercfg /X monitor-timeout-dc 5
