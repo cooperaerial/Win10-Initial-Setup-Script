@@ -1,6 +1,4 @@
 ### Privacy Settings ###
-DisableBackgroundApps
-DisableTailoredExperiences
 DisableWebLangList
 
 ### Security Tweaks ###
@@ -13,7 +11,6 @@ EnableStorageSense
 
 ### UI Tweaks ###
 EnableAeroShake
-DisableStickyKeys
 ShowTaskManagerDetails
 ShowFileOperationsDetails
 HideTaskbarSearch
