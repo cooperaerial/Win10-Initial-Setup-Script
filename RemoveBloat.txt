@@ -1,11 +1,6 @@
 ### Application Tweaks ###
 UninstallMsftBloat
 UninstallThirdPartyBloat
-DisableXboxFeatures
-DisableAdobeFlash
-DisableEdgePreload
-DisableEdgeShortcutCreation
-DisableIEFirstRun
 
 ### Auxiliary Functions ###
 WaitForKey
