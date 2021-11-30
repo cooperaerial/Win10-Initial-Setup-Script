@@ -4085,7 +4085,7 @@ Function UnpinTaskbarIcons {
 # Wait for key press
 Function WaitForKey {
 	Clear-Host
-	Write-Output "`nPress any key to reboot... or close window"
+	Write-Output "`nPress any key to reboot... or close window " 
 	[Console]::ReadKey($true) | Out-Null
 }
 
