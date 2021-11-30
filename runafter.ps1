@@ -103,5 +103,9 @@ Set-TimeZone -Name "US Mountain Standard Time"
 Write-Host "VR License"
 [Environment]::SetEnvironmentVariable("VRLHOME", $env:VRLHOME + "\\tuc-jobs\vrl$\lic", "Machine")
 
+
+Write-Output "`nPress any key to continue..."
+[Console]::ReadKey($true) | Out-Null
+
 Write-Host "Restarting..."
 Restart-Computer
