@@ -93,6 +93,24 @@ If (!(Test-Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explor
 }
 Set-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer" -Name "HideSCAMeetNow" -Value 1
 
+Write-Host "Disable Edge Shopping..."
+If (!(Test-Path "HKLM:SOFTWARE\Policies\Microsoft\Edge\Recommended")) {
+  New-Item -Path "HKLM:SOFTWARE\Policies\Microsoft\Edge\Recommended" -Force | Out-Null
+}
+Set-ItemProperty -Path "HKLM:SOFTWARE\Policies\Microsoft\Edge\Recommended" -Name "EdgeShoppingAssistantEnabled" -Value 0
+
+Write-Host "Disable Edge new tab content..."
+If (!(Test-Path "HKLM:SOFTWARE\Policies\Microsoft\Edge\Recommended")) {
+  New-Item -Path "HKLM:SOFTWARE\Policies\Microsoft\Edge\Recommended" -Force | Out-Null
+}
+Set-ItemProperty -Path "HKLM:SOFTWARE\Policies\Microsoft\Edge\Recommended" -Name "NewTabPageContentEnabled" -Value 0
+
+Write-Host "Restore Edge tabs when opening..."
+If (!(Test-Path "HKLM:SOFTWARE\Policies\Microsoft\Edge\Recommended")) {
+  New-Item -Path "HKLM:SOFTWARE\Policies\Microsoft\Edge\Recommended" -Force | Out-Null
+}
+Set-ItemProperty -Path "HKLM:SOFTWARE\Policies\Microsoft\Edge\Recommended" -Name "RestoreOnStartup" -Value 1
+
 
 Write-Host "Setting Time Zone To AZ No DST"
 Set-TimeZone -Name "US Mountain Standard Time"
