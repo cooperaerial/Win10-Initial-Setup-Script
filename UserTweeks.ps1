@@ -10,3 +10,8 @@ If (!(Test-Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Feeds")) {
 }
 Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Feeds" -Name "ShellFeedsTaskbarViewMode" -Type DWord -Value 2
 
+Write-Output "Hide Windows Ink Workspace Button..."
+If (!(Test-Path "HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\PenWorkspace")) {
+  New-Item -Path "HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\PenWorkspace" -Force | Out-Null
+}
+Set-ItemProperty -Path "HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\PenWorkspace" -Name "PenWorkspaceButtonDesiredVisibility" -Type DWord -Value 0
