@@ -111,6 +111,12 @@ If (!(Test-Path "HKLM:SOFTWARE\Policies\Microsoft\Edge\Recommended")) {
 }
 Set-ItemProperty -Path "HKLM:SOFTWARE\Policies\Microsoft\Edge\Recommended" -Name "RestoreOnStartup" -Value 1
 
+Write-Host "Turn off News and Interests..."
+If (!(Test-Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\Windows Feeds")) {
+  New-Item -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\Windows Feeds" -Force | Out-Null
+}
+Set-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\Windows Feeds" -Name "EnableFeeds" -Value 0
+
 
 Write-Host "Setting Time Zone To AZ No DST"
 Set-TimeZone -Name "US Mountain Standard Time"
