@@ -1,6 +1,3 @@
-Write-Host "Map Lidar as L: ..."
-New-PSDrive -Name "L" -Root "\\phx-storage\Lidar" -Persist -PSProvider "FileSystem"
-
 Write-Host "Map Management as M: ..."
 New-PSDrive -Name "M" -Root "\\phx-storage\Management" -Persist -PSProvider "FileSystem"
 
