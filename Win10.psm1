@@ -3389,12 +3389,6 @@ function UninstallThirdPartyBloat {
 	Get-AppxPackage -allusers "ThumbmunkeysLtd.PhototasticCollage" | Remove-AppxPackage
 	Get-AppxPackage -allusers "WinZipComputing.WinZipUniversal" | Remove-AppxPackage
 	Get-AppxPackage -allusers "XINGAG.XING" | Remove-AppxPackage
-	get-appxpackage -allusers *tiktok* | remove-appxpackage
-	get-appxpackage -allusers *spotify* | remove-appxpackage
-	get-appxpackage -allusers *dolby* | remove-appxpackage
-	get-appxpackage -allusers *clipchamp* | remove-appxpackage
-	get-appxpackage -allusers *instagram* | remove-appxpackage
-	get-appxpackage -allusers *facebook* | remove-appxpackage
 }
 
 # Install default third party applications
