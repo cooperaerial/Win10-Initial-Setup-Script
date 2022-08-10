@@ -3389,6 +3389,8 @@ function UninstallThirdPartyBloat {
 	Get-AppxPackage -allusers "ThumbmunkeysLtd.PhototasticCollage" | Remove-AppxPackage
 	Get-AppxPackage -allusers "WinZipComputing.WinZipUniversal" | Remove-AppxPackage
 	Get-AppxPackage -allusers "XINGAG.XING" | Remove-AppxPackage
+	Set-ItemProperty -Path "HKLM:\Software\Policies\Microsoft\PushToInstall" -Name "DisablePushToInstall" -Type DWord -Value 1
+	Set-ItemProperty -Path "HKLM:\Software\Policies\Microsoft\MRT" -Name "DontOfferThroughWUAU" -Type DWord -Value 1
 }
 
 # Install default third party applications
