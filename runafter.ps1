@@ -117,13 +117,14 @@ If (!(Test-Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\Windows Feeds")) {
 }
 Set-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\Windows Feeds" -Name "EnableFeeds" -Value 0
 
-
 Write-Host "Setting Time Zone To AZ No DST"
 Set-TimeZone -Name "US Mountain Standard Time"
 
 Write-Host "VR License"
 [Environment]::SetEnvironmentVariable("VRLHOME", $env:VRLHOME + "\\tuc-jobs\vrl$\lic", "Machine")
 
+Write-Host "Customize Windows 11 Start Menu"
+Copy-Item ".\LayoutModification.json" -Destination "C:\Users\Default\AppData\Local\Microsoft\Windows\Shell"
 
 Write-Output "`nPress any key to continue..."
 [Console]::ReadKey($true) | Out-Null
