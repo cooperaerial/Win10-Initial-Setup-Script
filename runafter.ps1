@@ -49,6 +49,36 @@ switch ($menu) {
   }
 }
 
+function Show-Menu {
+  param (
+    [string]$Title = 'Set Time Zone'
+  )
+  Clear-Host
+  Write-Host "================ $Title ================"
+
+  Write-Host "A: Press 'A' AZ"
+  Write-Host "E: Press 'E' EST"
+  Write-Host "P: Press 'P' PST"
+}
+
+Show-Menu
+$menu = Read-Host "Please make a selection"
+switch ($menu) {
+  'A' {
+    Clear-Host
+    Write-Host "Setting Time Zone To AZ No DST"
+    Set-TimeZone -Name "US Mountain Standard Time"
+  } 'E' {
+    Clear-Host
+    Write-Host "Setting Time Zone To Eastern Standard Time"
+    Set-TimeZone -Name "Eastern Standard Time"
+  } 'P' {
+    Clear-Host
+    Write-Host "Setting Time Zone To Pacific Standard Time"
+    Set-TimeZone -Name "Pacific Standard Time"
+  }
+}
+
 Write-Host "Set RegisteredOrganization and RegisteredOwner..."
 If (!(Test-Path "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\RegisteredOrganization")) {
   New-Item -Path "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\RegisteredOrganization" -Force | Out-Null
@@ -116,9 +146,6 @@ If (!(Test-Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\Windows Feeds")) {
   New-Item -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\Windows Feeds" -Force | Out-Null
 }
 Set-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\Windows Feeds" -Name "EnableFeeds" -Value 0
-
-Write-Host "Setting Time Zone To AZ No DST"
-Set-TimeZone -Name "US Mountain Standard Time"
 
 Write-Host "VR License"
 [Environment]::SetEnvironmentVariable("VRLHOME", $env:VRLHOME + "\\tuc-jobs\vrl$\lic", "Machine")
