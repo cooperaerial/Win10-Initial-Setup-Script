@@ -151,7 +151,7 @@ Write-Host "VR License"
 [Environment]::SetEnvironmentVariable("VRLHOME", $env:VRLHOME + "\\tuc-jobs\vrl$\lic", "Machine")
 
 Write-Host "Customize Windows 11 Start Menu"
-Copy-Item ".\LayoutModification.json" -Destination "C:\Users\Default\AppData\Local\Microsoft\Windows\Shell"
+Copy-Item "C:\Win10-Initial-Setup-Script-master\LayoutModification.json" -Destination "C:\Users\Default\AppData\Local\Microsoft\Windows\Shell"
 
 Write-Output "`nPress any key to continue..."
 [Console]::ReadKey($true) | Out-Null
