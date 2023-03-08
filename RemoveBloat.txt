@@ -4,4 +4,3 @@ UninstallThirdPartyBloat
 
 ### Auxiliary Functions ###
 WaitForKey
-Restart
