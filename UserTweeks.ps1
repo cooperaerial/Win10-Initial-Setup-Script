@@ -48,3 +48,9 @@ Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\ContentD
 
 Write-Host "Customize Windows 11 Start Menu"
 Copy-Item "C:\Win10-Initial-Setup-Script-master\LayoutModification.json" -Destination "$env:userprofile\AppData\Local\Microsoft\Windows\Shell"
+
+Write-Output "Enable Compact view in File Explorer..."
+If (!(Test-Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced")) {
+  New-Item -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" -Force | Out-Null
+}
+Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" -Name "UseCompactMode" -Type DWord -Value 1
