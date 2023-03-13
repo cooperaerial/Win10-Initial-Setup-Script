@@ -152,6 +152,7 @@ Write-Host "VR License"
 
 Write-Host "Customize Windows 11 Start Menu"
 Copy-Item "C:\Win10-Initial-Setup-Script-master\LayoutModification.json" -Destination "C:\Users\Default\AppData\Local\Microsoft\Windows\Shell"
+Get-AppxPackage -AllUsers Microsoft.Windows.ShellExperienceHost | Foreach {Add-AppxPackage -DisableDevelopmentMode -Register "$($_.InstallLocation)\AppXManifest.xml"}
 
 Write-Output "`nPress any key to continue..."
 [Console]::ReadKey($true) | Out-Null
