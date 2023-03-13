@@ -47,4 +47,4 @@ Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\ContentD
 Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" -Name "SystemPaneSuggestionsEnabled" -Type DWord -Value 0
 
 Write-Host "Customize Windows 11 Start Menu"
-Copy-Item ".\LayoutModification.json" -Destination "$env:userprofile\AppData\Local\Microsoft\Windows\Shell"
+Copy-Item "C:\Win10-Initial-Setup-Script-master\LayoutModification.json" -Destination "$env:userprofile\AppData\Local\Microsoft\Windows\Shell"
