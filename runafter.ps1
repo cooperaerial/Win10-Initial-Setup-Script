@@ -116,30 +116,11 @@ If (!(Test-Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\Explorer")) {
 }
 Set-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\Explorer" -Name "HideRecentlyAddedApps" -Type DWord -Value 0
 
-
 Write-Host "Remove Meet Now from taskbar..."
 If (!(Test-Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer")) {
   New-Item -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer" -Force | Out-Null
 }
 Set-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer" -Name "HideSCAMeetNow" -Value 1
-
-Write-Host "Disable Edge Shopping..."
-If (!(Test-Path "HKLM:SOFTWARE\Policies\Microsoft\Edge\Recommended")) {
-  New-Item -Path "HKLM:SOFTWARE\Policies\Microsoft\Edge\Recommended" -Force | Out-Null
-}
-Set-ItemProperty -Path "HKLM:SOFTWARE\Policies\Microsoft\Edge\Recommended" -Name "EdgeShoppingAssistantEnabled" -Value 0
-
-Write-Host "Disable Edge new tab content..."
-If (!(Test-Path "HKLM:SOFTWARE\Policies\Microsoft\Edge\Recommended")) {
-  New-Item -Path "HKLM:SOFTWARE\Policies\Microsoft\Edge\Recommended" -Force | Out-Null
-}
-Set-ItemProperty -Path "HKLM:SOFTWARE\Policies\Microsoft\Edge\Recommended" -Name "NewTabPageContentEnabled" -Value 0
-
-Write-Host "Restore Edge tabs when opening..."
-If (!(Test-Path "HKLM:SOFTWARE\Policies\Microsoft\Edge\Recommended")) {
-  New-Item -Path "HKLM:SOFTWARE\Policies\Microsoft\Edge\Recommended" -Force | Out-Null
-}
-Set-ItemProperty -Path "HKLM:SOFTWARE\Policies\Microsoft\Edge\Recommended" -Name "RestoreOnStartup" -Value 1
 
 Write-Host "Turn off News and Interests..."
 If (!(Test-Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\Windows Feeds")) {
