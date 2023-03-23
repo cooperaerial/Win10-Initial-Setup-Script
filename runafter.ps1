@@ -133,6 +133,9 @@ Write-Host "VR License"
 
 Write-Host "Customize Windows 11 Start Menu"
 Copy-Item "C:\Win10-Initial-Setup-Script-master\LayoutModification.json" -Destination "C:\Users\Default\AppData\Local\Microsoft\Windows\Shell"
+New-Item -ItemType Directory -Path C:\Users\Default\AppData\Local\Packages\Microsoft.Windows.StartMenuExperienceHost_cw5n1h2txyewy\LocalState -ErrorAction SilentlyContinue
+Copy-Item "C:\Win10-Initial-Setup-Script-master\start2.bin" -Destination "C:\Users\Default\AppData\Local\Packages\Microsoft.Windows.StartMenuExperienceHost_cw5n1h2txyewy\LocalState"
+
 
 Write-Host "Remove icons from task bar for new accounts"
 REG LOAD HKLM\Default C:\Users\Default\NTUSER.DAT
