@@ -121,8 +121,8 @@ DisableThumbsDBOnNetwork
 
 
 ### Application Tweaks ###
-UninstallMsftBloat
-UninstallThirdPartyBloat
+UninstallMsftBloatAllUsers
+UninstallThirdPartyBloatAllUsers
 DisableXboxFeatures
 DisableAdobeFlash
 DisableEdgePreload
