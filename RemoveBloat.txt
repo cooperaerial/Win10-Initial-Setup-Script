@@ -1,6 +1,7 @@
 ### Application Tweaks ###
 UninstallMsftBloat
 UninstallThirdPartyBloat
+DisableXboxFeatures
 
 ### Auxiliary Functions ###
 WaitForKey
