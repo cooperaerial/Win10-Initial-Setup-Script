@@ -66,3 +66,10 @@ If (!(Test-Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Search")) {
   New-Item -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Search" -Force | Out-Null
 }
 Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Search" -Name "BingSearchEnabled" -Type DWord -Value 0
+
+Write-Host "Set language and region to en-US..."
+Set-Culture en-US
+Set-WinSystemLocale -SystemLocale en-US
+Set-WinUILanguageOverride -Language en-US
+Set-WinUserLanguageList en-US -Force
+Set-WinHomeLocation -GeoId 244

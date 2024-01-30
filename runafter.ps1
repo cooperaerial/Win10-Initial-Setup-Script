@@ -79,6 +79,13 @@ switch ($menu) {
   }
 }
 
+Write-Host "Set language and region to en-US..."
+Set-Culture en-US
+Set-WinSystemLocale -SystemLocale en-US
+Set-WinUILanguageOverride -Language en-US
+Set-WinUserLanguageList en-US -Force
+Set-WinHomeLocation -GeoId 244
+
 Write-Host "Set RegisteredOrganization and RegisteredOwner..."
 If (!(Test-Path "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\RegisteredOrganization")) {
   New-Item -Path "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\RegisteredOrganization" -Force | Out-Null
