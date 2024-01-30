@@ -5,3 +5,4 @@ DisableXboxFeatures
 
 ### Auxiliary Functions ###
 WaitForKey
+Restart
