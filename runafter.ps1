@@ -30,6 +30,7 @@ switch ($menu) {
     powercfg /X monitor-timeout-dc 5
     powercfg /X standby-timeout-ac 0
     powercfg /X standby-timeout-dc 10
+    powercfg /hibernate off
   } '2' {
     Clear-Host
     Write-Host "Setting Laptop (3 Hr Sleep)..."
