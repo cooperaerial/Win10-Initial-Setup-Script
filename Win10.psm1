@@ -3348,6 +3348,9 @@ Function UninstallMsftBloatAllUsers {
 	Get-AppxPackage -allusers "MicrosoftTeams" | Remove-AppxPackage
 	Get-AppxPackage -allusers "Microsoft.Advertising.Xaml" | Remove-AppxPackage # Dependency for microsoft.windowscommunicationsapps, Microsoft.BingWeather
 	Get-AppxPackage -allusers "MicrosoftCorporationII.MicrosoftFamily" | Remove-AppxPackag
+	Get-AppxPackage -allusers "Microsoft.Copilot" | Remove-AppxPackage -AllUsers
+	Get-AppxPackage -allusers "Microsoft.OutlookForWindows" | Remove-AppxPackage -AllUsers
+	Get-AppxPackage -allusers "MicrosoftWindows.Client.WebExperience" | Remove-AppxPackage -AllUsers
 }
 
 # In case you have removed them for good, you can try to restore the files using installation medium as follows
