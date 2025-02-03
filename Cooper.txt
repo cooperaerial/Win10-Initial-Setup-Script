@@ -45,7 +45,6 @@ SetDEPOptIn
 
 ### Service Tweaks ###
 EnableUpdateMSRT
-DisableUpdateDriver
 DisableUpdateRestart
 DisableHomeGroups
 DisableSharedExperiences
