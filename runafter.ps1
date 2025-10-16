@@ -136,6 +136,12 @@ If (!(Test-Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\Windows Feeds")) {
 }
 Set-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\Windows Feeds" -Name "EnableFeeds" -Value 0
 
+Write-Host "Turn off Show sponsored links in Edge..."
+If (!(Test-Path "HKLM:\SOFTWARE\Policies\Microsoft\Edge")) {
+  New-Item -Path "HKLM:\SOFTWARE\Policies\Microsoft\Edge" -Force | Out-Null
+}
+Set-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Edge" -Name "NewTabPageHideDefaultTopSites" -Value 1
+
 Write-Host "VR License"
 [Environment]::SetEnvironmentVariable("VRLHOME", $env:VRLHOME + "\\tuc-data\vrl$\lic", "Machine")
 
