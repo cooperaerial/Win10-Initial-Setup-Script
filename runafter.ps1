@@ -80,6 +80,48 @@ switch ($menu) {
   }
 }
 
+function Show-Menu {
+  param (
+    [string]$Title = 'Windows Update Driver Settings'
+  )
+  Clear-Host
+  Write-Host "================ $Title ================"
+
+  Write-Host "Y: Press 'Y' to Enable driver offering through Windows Update (Normal Computer)"
+  Write-Host "N: Press 'N' to Disable driver offering through Windows Update (Comp Computer)"
+  Write-Host "S: Press 'S' to skip"
+}
+
+Show-Menu
+$menu = Read-Host "Please make a selection"
+switch ($menu) {
+  'Y' {
+    Clear-Host
+    Write-Output "Enabling driver offering through Windows Update..."
+    Remove-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\Device Metadata" -Name "PreventDeviceMetadataFromNetwork" -ErrorAction SilentlyContinue
+    Remove-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\DriverSearching" -Name "SearchOrderConfig" -ErrorAction SilentlyContinue
+    Remove-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate" -Name "ExcludeWUDriversInQualityUpdate" -ErrorAction SilentlyContinue
+  } 'N' {
+    
+    Clear-Host
+    Write-Output "Disabling driver offering through Windows Update..."
+    If (!(Test-Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\Device Metadata")) {
+      New-Item -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\Device Metadata" -Force | Out-Null
+    }
+    Set-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\Device Metadata" -Name "PreventDeviceMetadataFromNetwork" -Type DWord -Value 1
+    If (!(Test-Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\DriverSearching")) {
+      New-Item -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\DriverSearching" -Force | Out-Null
+    }
+    Set-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\DriverSearching" -Name "SearchOrderConfig" -Type DWord -Value 0
+    If (!(Test-Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate")) {
+      New-Item -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate" | Out-Null
+    }
+    Set-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate" -Name "ExcludeWUDriversInQualityUpdate" -Type DWord -Value 1
+  } 's' {
+    return
+  }
+}
+
 Write-Host "Set language and region to en-US..."
 Set-Culture en-US
 Set-WinSystemLocale -SystemLocale en-US
